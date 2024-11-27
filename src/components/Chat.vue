@@ -81,7 +81,7 @@
       <div class="flex-1 p-4 relative">
         <div
           ref="messageContainer"
-          class="space-y-4 mb-16 h-[calc(100vh-12rem)] overflow-y-auto"
+          class="space-y-4 mb-16 h-[calc(100vh-12rem)] overflow-y-auto pr-2"
         >
           <div
             v-for="message in currentMessages"
