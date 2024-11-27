@@ -125,7 +125,7 @@
 </template>
 
 <script setup>
-import { ref, computed, nextTick } from "vue";
+import { ref, computed, onMounted, nextTick } from "vue";
 import {
   MapIcon,
   UserIcon,
@@ -840,11 +840,15 @@ const formatMessage = (text) => {
       `<a href="${url}" target="_blank" class="text-blue-400 hover:underline">${url}</a>`
   );
 };
+
+onMounted(() => {
+  nextTick(() => {
+    scrollToBottom();
+  });
+});
 </script>
 
 <style>
-/* @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"); */
-
 @keyframes fadeIn {
   from {
     opacity: 0;
